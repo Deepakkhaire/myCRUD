@@ -1,0 +1,28 @@
+<div class="container py-3">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3 col-12">
+            <h4 class="text-center text-primary mb-3">Regester Here..!</h4>
+            <form [formGroup]="formData" (ngSubmit)="saveUser()">
+                <div class="form-group">
+                    <label for="fname">First Name :</label>
+                    <input type="text" name="first_name" formControlName="firstname" id="fname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name :</label>
+                    <input type="text" name="last_name" formControlName="lastname" id="lname" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="text" name="email" formControlName="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="pass">Password :</label>
+                    <input type="password" name="password" formControlName="password" id="pass" class="form-control">
+                </div>
+                <div class="form-group text-right mt-4">
+                    <button type="submit" name="sub" class="btn btn-primary ">{{isNewUser ? 'Submit' : 'Update'}} </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

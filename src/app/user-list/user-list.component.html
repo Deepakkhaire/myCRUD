@@ -1,0 +1,33 @@
+<div class="container py-3">
+    <div class="row ">
+        <div class="col-12">
+            <h4 class="text-primary text-center mb-3">List of Users</h4>
+            <table class="table table-responsive  w-100 d-block d-md-table table-bordered table-hover">
+                <thead>
+                    <tr class="text-center">
+                        <th>Sr.No</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Password</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="items text-muted"> 
+                    <tr *ngFor="let user of userLists let i = index">
+                        <td class="text-center">{{i + 1}}</td>
+                        <td>{{user.firstname}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.password}}</td>
+                        <td class="text-center"><a class="text-primary" (click)="editUser(user)"><i class="fa  fa-2x fa-pencil-square-o" aria-hidden="true"></i>
+                        </a></td>
+                        <td class="text-center"><a class="text-danger" (click)="deleteUser(user)"><i class="fa  fa-2x fa-trash-o" aria-hidden="true"></i>
+                        </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
